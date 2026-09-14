@@ -1,0 +1,34 @@
+<h1>Week 2 — Extension: Cooperativity turns positive feedback from amplification into memory</h1>
+
+<p class="meta">Author: Your Name · Week 2 · CCBS 2026</p>
+
+<p class="card"><strong>One sentence:</strong> Positive feedback does not automatically make a memory switch; it becomes memory only when the production and removal curves can create two stable fixed points separated by an unstable threshold.</p>
+
+<h2>The point I am adding</h2>
+
+<p>Lecture 4 explains why a simulation is not enough: one trajectory cannot tell us what a whole family of models can do. I want to push that point using a small gene-circuit example. A positive autoregulatory gene is often described as a possible memory element, but positive feedback alone is not sufficient. In a one-dimensional concentration model, memory requires three fixed points: two attracting states and one repelling threshold between them.</p>
+
+<p>A minimal model is</p>
+
+<p>\[
+\dot{x}=a+b\frac{x^n}{K^n+x^n}-x.
+\]</p>
+
+<p>The first term is basal expression, the Hill term is self-activation, and the last term represents dilution or degradation. Lecture 3 motivates this kind of reduced production law from fast binding and promoter occupancy, while Lecture 4 tells us to look at crossings and stability rather than only at one simulated time trace.</p>
+
+<h2>Work it</h2>
+
+<p>The key comparison is between weak and strong nonlinearity. When \(n=1\), the production curve is saturating but not very steep, so it usually crosses the removal line once. The system has one stable operating point: positive feedback amplifies expression, but it does not store a memory. When \(n=4\), the production curve can become sigmoidal enough to cross removal three times. The low and high crossings are stable, while the middle crossing is unstable. That middle point is the threshold: perturbations on one side return low, and perturbations on the other side go high.</p>
+
+<p>This is the structural-function statement: bistability is not read directly from the word “feedback”. It comes from the geometry of production against removal.</p>
+
+<h2>What I would argue against / where this breaks</h2>
+
+<p>The conclusion is not that cooperativity always causes bistability. It only makes bistability possible over a parameter range. If basal expression is too high, if maximal activation is too weak, or if removal is too strong, the three crossings collapse back to one. This is why a biological diagram with a positive arrow is not yet a proof of memory. The claim has to survive the fixed-point analysis.</p>
+
+<h2>Sources</h2>
+<ul class="src">
+  <li>CCBS 2026 Lecture 3 core page — used for reduced production laws and Hill-type promoter occupancy.</li>
+  <li>CCBS 2026 Lecture 4 core page — used for fixed points, crossings, stability, and the limits of simulation.</li>
+  <li>Gardner, T. S., Cantor, C. R., and Collins, J. J. Construction of a genetic toggle switch in Escherichia coli. Nature 403, 339–342 (2000). DOI: 10.1038/35002131 — used as the biological example that bistability requires conditions, not just a feedback diagram.</li>
+</ul>
